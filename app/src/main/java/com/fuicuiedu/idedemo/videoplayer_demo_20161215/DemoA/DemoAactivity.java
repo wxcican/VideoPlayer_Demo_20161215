@@ -87,7 +87,6 @@ public class DemoAactivity extends AppCompatActivity {
             //有没有销毁?
             @Override
             public void surfaceDestroyed(SurfaceHolder holder) {
-                //停止播放
                 mediaPlayer.stop();
             }
         });

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import com.fuicuiedu.idedemo.videoplayer_demo_20161215.R;
 import com.fuicuiedu.idedemo.videoplayer_demo_20161215.VideoUrlRes;
 
+import io.vov.vitamio.widget.MediaController;
 import io.vov.vitamio.widget.VideoView;
 
 public class DemoDActivity extends AppCompatActivity {
@@ -19,6 +20,10 @@ public class DemoDActivity extends AppCompatActivity {
         videoView = (VideoView) findViewById(R.id.main_d_vv);
 
         videoView.setVideoPath(VideoUrlRes.getTestUrl1());
+
+        //加入视图控制器（Vitamio）
+        MediaController mediaController = new MediaController(this);
+        videoView.setMediaController(mediaController);
 
         videoView.start();
 
